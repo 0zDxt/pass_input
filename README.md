@@ -6,20 +6,40 @@ ____                                     _            _   _
 |_|   \__,_|___/___/ \_/\_/ \___/|_|  \__,_| |___/\___|\__|\__\___|_|   
 
 ```
+This Python program enables user registration and authentication by storing usernames and hashed passwords in a SQLite database. It uses SHA-256 for password hashing and provides a command-line interface.
 
-# Simple password setter script
+# Features
+- Register users with a unique username and password.
+- Verify passwords against stored hashes.
+- Store data securely in a SQLite database (users.db).
+- Basic error handling for database operations.
 
-This is a basic Python script for practicing user input password handling, and simple authentification.
-WIP for fun 
+# Requirements
+- Python 3.6+
+- Standard Python modules: getpass, hashlib, sqlite3
 
-## Features
-- Secure password input using `getpass`
-- Encrypt password using `hashlib`
-- Recursive password confirmation if inputs don't match
-- Basis access check after setting the password
+No additional dependencies required.
 
-## Requirements
-- Python 3.x
+# Installation
+- Clone or download the source code.
+- Ensure Python 3 is installed: python3 --version.
+- Navigate to the directory containing main.py.
 
-## Notes
-This is not intended for real security use
+# Usage
+Run the program: python3 main.py
+Follow prompts:Enter a username.
+- Set and confirm a password.
+- If the username is unique, it’s saved to users.db.
+- Enter the password again to verify access.
+
+# Project Structure
+main.py: Main script for user registration and authentication.
+users.db: SQLite database storing usernames and password hashes.
+
+# Database Structure
+Table users:username (TEXT, primary key): Unique username.
+password hash (TEXT, not null): SHA-256 password hash.
+
+# Security
+Passwords are hashed with SHA-256.
+Ensure users.db is stored securely with restricted permissions.
