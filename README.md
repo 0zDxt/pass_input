@@ -6,40 +6,35 @@ ____                                     _            _   _
 |_|   \__,_|___/___/ \_/\_/ \___/|_|  \__,_| |___/\___|\__|\__\___|_|   
 
 ```
-This Python program enables user registration and authentication by storing usernames and hashed passwords in a SQLite database. It uses SHA-256 for password hashing and provides a command-line interface.
+This is a sloppy Python project to train myself to password inputs and handling hashes.
+This is not meant to be used in production.
+PAsswords will be hashed in sha-256 and stored in a dedicated user.db SQL database. Please ensure to safely store it
+It probably sucks and if by any chance to read this please feel free to tell me how to improve it.
 
 # Features
-- Register users with a unique username and password.
-- Verify passwords against stored hashes.
-- Store data securely in a SQLite database (users.db).
-- Basic error handling for database operations.
+- Register users with a unique username and password
+- Verify passwords against stored hashes
+- Store data securely in a SQLite database (users.db)
+- Basic error handling for database operations
 
 # Requirements
 - Python 3.6+
 - Standard Python modules: getpass, hashlib, sqlite3
 
-No additional dependencies required.
-
 # Installation
-- Clone or download the source code.
-- Ensure Python 3 is installed: python3 --version.
-- Navigate to the directory containing main.py.
+- Clone or download the source code
+- Ensure Python 3 is installed: python3 --version
+- Navigate to the directory containing main.py
 
 # Usage
-Run the program: python3 main.py
-Follow prompts:Enter a username.
-- Set and confirm a password.
-- If the username is unique, it’s saved to users.db.
-- Enter the password again to verify access.
-
-# Project Structure
-main.py: Main script for user registration and authentication.
-users.db: SQLite database storing usernames and password hashes.
+Run the script: python3 main.py
+Follow prompts:Enter a username
+- Set and confirm a password
+- If the username is unique, it’s saved to users.db
+- Enter the password again to verify access
 
 # Database Structure
 Table users:username (TEXT, primary key): Unique username.
-password hash (TEXT, not null): SHA-256 password hash.
+password hash (TEXT, not null): SHA-256 pasword hash
 
-# Security
-Passwords are hashed with SHA-256.
-Ensure users.db is stored securely with restricted permissions.
+(real nerds listen to UwU_underground)

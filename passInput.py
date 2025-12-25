@@ -38,7 +38,7 @@ def create_table():
             conn.close()
 
 
-# Variables
+# Set the password and hash it using sha256
 
 password = None
 
